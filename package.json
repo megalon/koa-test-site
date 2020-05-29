@@ -2,12 +2,12 @@
   "name": "koa-test-site",
   "version": "0.0.1",
   "description": "Testbed for Koa and NodeJS",
-  "main": "build/server.js",
+  "main": "build/index.js",
   "author": "megalon",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "tsc-watch --onSuccess \"node ./build/server.js\" --onFailure \"echo Compilation Failed\""
+    "dev": "tsc-watch --onSuccess \"node ./build/index.js\" --onFailure \"echo Compilation Failed\""
   },
   "dependencies": {
     "koa": "^2.12.0",

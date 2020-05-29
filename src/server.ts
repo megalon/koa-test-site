@@ -1,9 +1,6 @@
 import koa from 'koa'
-const app = new koa()
 
-app.on('error', (err, ctx) => {
-  console.error('Server error:', err, ctx)
-})
+const app = new koa()
 
 app.use(async (ctx, next) => {
   // Go to next middleware
@@ -28,4 +25,8 @@ app.use(async (ctx) => {
   ctx.body = 'Hello Koa'
 })
 
-app.listen(3000)
+app.on('error', (err, ctx) => {
+  console.error('Server error:', err, ctx)
+})
+
+export default app
