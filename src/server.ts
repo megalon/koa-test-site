@@ -1,5 +1,6 @@
 import koa from 'koa'
 import Router from '@koa/router'
+import Cors from '@koa/cors'
 import Logger from 'koa-logger'
 import Bodyparser from 'koa-bodyparser'
 import Helmet from 'koa-helmet'
@@ -9,10 +10,11 @@ const app = new koa()
 const router = new Router()
 
 app.use(Logger())
-routes(router)
-app.use(router.routes())
 app.use(Bodyparser())
 app.use(Helmet())
+app.use(Cors())
+routes(router)
+app.use(router.routes())
 
 app.use(async (ctx) => {
   ctx.body = ctx.request.body
