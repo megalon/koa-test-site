@@ -1,6 +1,13 @@
 import koa from 'koa'
+import Router from '@koa/router'
+import routes from './routes/routes'
+//import Logger from 'koa-logger'
 
 const app = new koa()
+const router = new Router()
+
+routes(router)
+app.use(router.routes())
 
 app.use(async (ctx, next) => {
   // Go to next middleware
