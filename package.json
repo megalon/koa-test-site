@@ -13,12 +13,14 @@
     "@koa/router": "^8.0.8",
     "@types/koa__router": "^8.0.2",
     "koa": "^2.12.0",
+    "koa-logger": "^3.2.1",
     "tsc-watch": "^4.2.8",
     "tslint": "^6.1.2",
     "typescript": "^3.9.3"
   },
   "devDependencies": {
     "@types/koa": "^2.11.3",
+    "@types/koa-logger": "^3.1.1",
     "@types/koa-router": "^7.4.1"
   }
 }
